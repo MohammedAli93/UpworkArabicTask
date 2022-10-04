@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Team : MonoBehaviour
 {
+    [SerializeField] Image winUi;
+    [SerializeField] Text winText;
     public Color teamColor;
 
     public RowOrColumn teamWinsOnMatching;
@@ -55,7 +56,8 @@ public class Team : MonoBehaviour
 
             if (row_column_filled)
             {
-                //<<<<<<<<<<<<
+                winText.text = teamName + " wins";
+                winUi.gameObject.SetActive(true);
                 Debug.Log($"{teamName} team wins");
             }
         }
