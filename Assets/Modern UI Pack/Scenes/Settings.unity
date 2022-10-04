@@ -1594,7 +1594,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -10534,7 +10534,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -14931,7 +14931,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -18398,7 +18398,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -20551,6 +20551,10 @@ PrefabInstance:
     - target: {fileID: 114605325341902098, guid: 14d730bc0601c7040932f7e2c5123eb8, type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114636963027500760, guid: 14d730bc0601c7040932f7e2c5123eb8, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224273869619497644, guid: 14d730bc0601c7040932f7e2c5123eb8, type: 3}
       propertyPath: m_Pivot.x
@@ -28936,7 +28940,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -33559,7 +33563,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -37796,7 +37800,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -41883,7 +41887,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -43704,7 +43708,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -46388,6 +46392,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114327744102432690, guid: 71766f1bef30953409612c3803df740a, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114474811028595558, guid: 71766f1bef30953409612c3803df740a, type: 3}
       propertyPath: m_fontColor.b
       value: 1
@@ -46841,7 +46849,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -55009,7 +55017,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -59821,6 +59829,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da70272bd956fb04da4eed5430d8e722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSettingsSO: {fileID: 11400000, guid: 0130a363f55708845ae9382b054a3bf6, type: 2}
+  greenTeamName: {fileID: 114304000768468660}
+  greenFirstName: {fileID: 114304002411775111}
+  greenSecondName: {fileID: 114304002294385701}
+  redTeamName: {fileID: 114304002385463434}
+  redFirstName: {fileID: 114304001840667654}
+  redSecondName: {fileID: 114304001526992445}
+  roundNumToggle:
+  - {fileID: 114162087032347714}
+  - {fileID: 114126100255205236}
+  difficultyToggle:
+  - {fileID: 267900856}
+  - {fileID: 877232179}
+  - {fileID: 2063568766}
+  answerShowTimeToggle:
+  - {fileID: 43562047}
+  - {fileID: 1045593427}
+  - {fileID: 694263066}
+  answerStayTimeToggle:
+  - {fileID: 195863986}
+  - {fileID: 578190251}
+  - {fileID: 778048425}
+  BGToggle:
+  - {fileID: 348448206}
+  - {fileID: 833976263}
+  - {fileID: 1537497291}
+  - {fileID: 505655577}
 --- !u!1001 &1120022257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84183,7 +84218,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -85779,6 +85814,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114008589502034240, guid: 4498e22a880a14c4fae5091f69805a0d, type: 3}
       propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114037087685589486, guid: 4498e22a880a14c4fae5091f69805a0d, type: 3}
+      propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114135857336957494, guid: 4498e22a880a14c4fae5091f69805a0d, type: 3}
@@ -108370,7 +108409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224413972544493284, guid: bdb8f55c79de3ce429e354b19dc74938, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960
+      value: 1002.93286
       objectReference: {fileID: 0}
     - target: {fileID: 224413972544493284, guid: bdb8f55c79de3ce429e354b19dc74938, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -111175,6 +111214,10 @@ PrefabInstance:
       propertyPath: m_IsOn
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114358876973068806, guid: 5fc34351c13648344b45790d063ab06c, type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114766581757455548, guid: 5fc34351c13648344b45790d063ab06c, type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
@@ -111420,7 +111463,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -117653,7 +117696,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -117698,7 +117741,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

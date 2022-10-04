@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,8 +13,10 @@ public class QuestionUI : MonoBehaviour
     [SerializeField] private Button enableAnswers_BTN;
     [SerializeField] private Text question_TXT;
     [SerializeField] private Text topic_TXT;
-    [SerializeField] private Text timer_TXT;
+    [SerializeField] private Text timer_TXT; //زمن ظهور الإجابة
     [SerializeField] private List<Button> answersButtons;
+
+    //20 >> زمن بقاء السؤال
 
     //=============================
     //=========== Timer ============

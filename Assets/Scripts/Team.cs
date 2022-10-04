@@ -54,7 +54,10 @@ public class Team : MonoBehaviour
             }
 
             if (row_column_filled)
+            {
+                //<<<<<<<<<<<<
                 Debug.Log($"{teamName} team wins");
+            }
         }
 
         //foreach (var x in winQuestionsIndexes)
