@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] GameSettingsSO gameSettingsSO;
+    int answerStayTime;
     //=============================
     //============= Question Containers ================
 
@@ -98,6 +100,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        answerStayTime = gameSettingsSO.answerStayTime;
+
         allQuestions = Resources.LoadAll<QuestionSO>("Questions/").ToList();
 
 
@@ -180,13 +184,13 @@ public class GameManager : MonoBehaviour
 
 
         // start 20 seconds timer.
-        questionUI.StartTimer(20,
+        questionUI.StartTimer(answerStayTime,
             () =>
             {
                 // show the answers, start 20 seconds timer, and swap teams if time is up.
                 SwapTeams();
                 questionUI.ShowAnswersPanel();
-                questionUI.StartTimer(20, null);
+                questionUI.StartTimer(answerStayTime, null);
             });
 
 
@@ -226,12 +230,12 @@ public class GameManager : MonoBehaviour
         {
             CurrentSelectedTeam.swappedAnswerOnce = true;
             SwapTeams();
-            questionUI.StartTimer(20, questionUI.Deactivate);
+            questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
 
             return;
         }
 
-        questionUI.StartTimer(20, questionUI.Deactivate);
+        questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
         questionUI.Deactivate();
         activeQuestionContainer.SetIncorrect();
 

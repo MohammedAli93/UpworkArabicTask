@@ -66,7 +66,7 @@ public class SceneSwitcher : MonoBehaviour
    public void playGame()
     {
         setSettingsSO();
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void setSettingsSO()
@@ -98,7 +98,8 @@ public class SceneSwitcher : MonoBehaviour
         gameSettingsSO.redsecondName = redSecondName.text;
         #endregion
 
-        SetEnumValueBasedOnToggle<roundNum>(roundNumToggle,out gameSettingsSO.roundsNum);
+        #region Toggles
+        SetEnumValueBasedOnToggle<roundNum>(roundNumToggle, out gameSettingsSO.roundsNum);
         SetEnumValueBasedOnToggle<answerShowTime>(answerShowTimeToggle, out gameSettingsSO.answerShowTime);
         SetEnumValueBasedOnToggle<answerStayTime>(answerStayTimeToggle, out gameSettingsSO.answerStayTime);
         SetEnumValueBasedOnToggle<BG>(BGToggle, out gameSettingsSO.bgNum);
@@ -111,19 +112,23 @@ public class SceneSwitcher : MonoBehaviour
             }
         }
 
-        print(gameSettingsSO.greenTeamName);
-        print(gameSettingsSO.greenfirstName);
-        print(gameSettingsSO.greensecondName);
-        
-        print(gameSettingsSO.redTeamName);
-        print(gameSettingsSO.redfirstName);
-        print(gameSettingsSO.redsecondName);
+        #endregion
 
-        print(gameSettingsSO.roundsNum);
-        print(gameSettingsSO.answerShowTime);
-        print(gameSettingsSO.answerStayTime);
-        print(gameSettingsSO.bgNum);
-        print(gameSettingsSO.difficulty);
+        #region Testing
+        //print(gameSettingsSO.greenTeamName);
+        //print(gameSettingsSO.greenfirstName);
+        //print(gameSettingsSO.greensecondName);
+
+        //print(gameSettingsSO.redTeamName);
+        //print(gameSettingsSO.redfirstName);
+        //print(gameSettingsSO.redsecondName);
+
+        //print(gameSettingsSO.roundsNum);
+        //print(gameSettingsSO.answerShowTime);
+        //print(gameSettingsSO.answerStayTime);
+        //print(gameSettingsSO.bgNum);
+        //print(gameSettingsSO.difficulty); 
+        #endregion
 
     }
 

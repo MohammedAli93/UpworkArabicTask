@@ -8,6 +8,7 @@ public class QuestionUI : MonoBehaviour
     //=============================
     //========== UI elements =============
 
+    [SerializeField] GameSettingsSO gameSettingsSO;
     [SerializeField] private GameObject teamSelection_Panel;
     [SerializeField] private GameObject answers_Panel;
     [SerializeField] private Button enableAnswers_BTN;
@@ -15,6 +16,9 @@ public class QuestionUI : MonoBehaviour
     [SerializeField] private Text topic_TXT;
     [SerializeField] private Text timer_TXT; //زمن ظهور الإجابة
     [SerializeField] private List<Button> answersButtons;
+
+    float answerShowTime;
+    float answerStayTime;
 
     //20 >> زمن بقاء السؤال
 
@@ -29,7 +33,12 @@ public class QuestionUI : MonoBehaviour
     {
         enableAnswers_BTN.onClick.AddListener(ShowAnswersPanel);
     }
-
+    private void Start()
+    {
+        timer_TXT.text = gameSettingsSO.answerShowTime.ToString(); 
+        answerShowTime = gameSettingsSO.answerShowTime;
+        answerStayTime = gameSettingsSO.answerStayTime;
+    }
     public void SetQuestion(QuestionSO question)
     {
         gameObject.SetActive(true);
@@ -72,10 +81,10 @@ public class QuestionUI : MonoBehaviour
 
         }
 
-        StartTimer(10, () =>
+        StartTimer(answerShowTime, () =>
         {
             ShowAnswersPanel();
-            StartTimer(20, GameManager.Instance.ShowTopicSelection);
+            StartTimer(answerStayTime, GameManager.Instance.ShowTopicSelection);
         });
     }
 
