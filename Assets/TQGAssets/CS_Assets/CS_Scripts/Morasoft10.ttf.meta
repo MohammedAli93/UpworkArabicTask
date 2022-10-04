@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 01e0cb39be7b8044cb6d046af9f629f5
+timeCreated: 1538150765
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Morasoft10
+  fontNames:
+  - Morasoft10
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
