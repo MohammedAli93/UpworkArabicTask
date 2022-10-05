@@ -66,7 +66,6 @@ public class SceneSwitcher : MonoBehaviour
    public void playGame()
     {
         setSettingsSO();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     private void setSettingsSO()

@@ -24438,8 +24438,8 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1114761808}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+      - m_Target: {fileID: 1114761809}
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
         m_MethodName: playGame
         m_Mode: 1
         m_Arguments:
@@ -59713,6 +59713,7 @@ GameObject:
   - component: {fileID: 1114761805}
   - component: {fileID: 1114761804}
   - component: {fileID: 1114761808}
+  - component: {fileID: 1114761809}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -59856,6 +59857,18 @@ MonoBehaviour:
   - {fileID: 833976263}
   - {fileID: 1537497291}
   - {fileID: 505655577}
+--- !u!114 &1114761809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1114761803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c061a6fbcac0d464a95044e6a13be682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1120022257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81538,7 +81551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28e040e2886a8c440a865c63a08e72b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b465e561142e2f4588c09acb20c81a1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -96138,7 +96151,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 28e040e2886a8c440a865c63a08e72b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 745a9ca189d30a040b812707cf869608, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -108409,7 +108422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224413972544493284, guid: bdb8f55c79de3ce429e354b19dc74938, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1002.93286
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224413972544493284, guid: bdb8f55c79de3ce429e354b19dc74938, type: 3}
       propertyPath: m_AnchoredPosition.y

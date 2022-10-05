@@ -920,7 +920,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1114761808}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_TargetAssemblyTypeName: ChangeScenes, Assembly-CSharp
         m_MethodName: playGame
         m_Mode: 1
         m_Arguments:
@@ -9160,7 +9160,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1114761803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da70272bd956fb04da4eed5430d8e722, type: 3}
+  m_Script: {fileID: 11500000, guid: c061a6fbcac0d464a95044e6a13be682, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1146272215
@@ -14621,7 +14621,7 @@ PrefabInstance:
     - target: {fileID: 114881510921694866, guid: e0494221100a5794e937462c0989b3f1, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1114761808}
+      objectReference: {fileID: 0}
     - target: {fileID: 114881510921694866, guid: e0494221100a5794e937462c0989b3f1, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
