@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="new game settings",menuName ="game settings")]
 public class GameSettingsSO : ScriptableObject
 {
-   [HideInInspector] public string greenTeamName;
+   [SerializeField] public string greenTeamName;
    [HideInInspector] public string redTeamName;
 
    [HideInInspector] public string greenfirstName;

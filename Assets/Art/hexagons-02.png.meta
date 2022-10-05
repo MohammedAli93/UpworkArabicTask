@@ -119,12 +119,12 @@ TextureImporter:
       name: hexagons-02_0
       rect:
         serializedVersion: 2
-        x: 108
+        x: 81
         y: 201
-        width: 66
+        width: 121
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: -33, y: 52}
@@ -145,12 +145,12 @@ TextureImporter:
       name: hexagons-02_1
       rect:
         serializedVersion: 2
-        x: 257
+        x: 235
         y: 201
-        width: 79
+        width: 120
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,7 +171,7 @@ TextureImporter:
         width: 131
         height: 112
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,7 +192,7 @@ TextureImporter:
         width: 121
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -208,12 +208,12 @@ TextureImporter:
       name: hexagons-02_4
       rect:
         serializedVersion: 2
-        x: 259
-        y: 62
-        width: 81
+        x: 237
+        y: 61
+        width: 121
         height: 104
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

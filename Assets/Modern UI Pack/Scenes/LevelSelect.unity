@@ -11672,8 +11672,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uFED7\uFEAE\uFBFE\uFE92\uFE8E\n"
-  m_isRightToLeft: 1
+  m_text: Note
+  m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71711ee072cd76f41adda00dc78967b6, type: 2}
   m_sharedMaterial: {fileID: 21389263527383422, guid: 71711ee072cd76f41adda00dc78967b6, type: 2}
   m_fontSharedMaterials: []
@@ -11743,7 +11743,7 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
   preserveNumbers: 0
   farsi: 1
-  originalText: "\u0642\u0631\u064A\u0628\u0627\n"
+  originalText: Note
   fixTags: 1
   forceFix: 0
 --- !u!222 &290907934
@@ -16093,10 +16093,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0627\uFEE7\uFE98\uFEC8\uFEAE\u0648\uFEE7\uFE8E \uFED7\uFEAE\uFBFE\uFE92\uFE8E
-    \uFED3\uFBFD \u0627\uFEDF\uFEE0\uFECC\uFE92\uFE94 \u0627\uFEDF\uFEA0\uFEAA\uFBFE\uFEAA\u0629
-    \n\n"
-  m_isRightToLeft: 1
+  m_text: This Game will be coming soon ...
+  m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 71711ee072cd76f41adda00dc78967b6, type: 2}
   m_sharedMaterial: {fileID: 21389263527383422, guid: 71711ee072cd76f41adda00dc78967b6, type: 2}
   m_fontSharedMaterials: []
@@ -16166,9 +16164,7 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
   preserveNumbers: 0
   farsi: 1
-  originalText: "\u0627\u0646\u062A\u0638\u0631\u0648\u0646\u0627 \u0642\u0631\u064A\u0628\u0627
-    \u0641\u064A \u0627\u0644\u0644\u0639\u0628\u0629 \u0627\u0644\u062C\u062F\u064A\u062F\u0629
-    \n\n"
+  originalText: This Game will be coming soon ...
   fixTags: 1
   forceFix: 0
 --- !u!222 &387588346
@@ -38198,6 +38194,10 @@ PrefabInstance:
     - target: {fileID: 114944131287549440, guid: 72b132e96d4c8c74fb223d675142eaf3, type: 3}
       propertyPath: titleText
       value: Note
+      objectReference: {fileID: 0}
+    - target: {fileID: 114944131287549440, guid: 72b132e96d4c8c74fb223d675142eaf3, type: 3}
+      propertyPath: descriptionText
+      value: This Game will be coming soon ...
       objectReference: {fileID: 0}
     - target: {fileID: 220782979992385070, guid: 72b132e96d4c8c74fb223d675142eaf3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -91037,10 +91037,8 @@ MonoBehaviour:
   cancelButton: {fileID: 961763944}
   mwAnimator: {fileID: 95882339094197857}
   icon: {fileID: 21300000, guid: a40e131b61d22ba42b2955962e636ca4, type: 3}
-  titleText: "\uFED7\uFEAE\uFBFE\uFE92\uFE8E "
-  descriptionText: "\u0627\uFEE7\uFE98\uFEC8\uFEAE\u0648\uFEE7\uFE8E \uFED7\uFEAE\uFBFE\uFE92\uFE8E
-    \uFED3\uFBFD \u0627\uFEDF\uFEE0\uFECC\uFE92\uFE94 \u0627\uFEDF\uFEA0\uFEAA\uFBFE\uFEAA\u0629
-    \n\n"
+  titleText: Note
+  descriptionText: This Game will be coming soon ...
   onOpen:
     m_PersistentCalls:
       m_Calls: []

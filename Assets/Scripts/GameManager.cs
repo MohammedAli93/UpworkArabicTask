@@ -28,11 +28,7 @@ public class GameManager : MonoBehaviour
     //=============================
     //============== Topics Buttons ===============
 
-    [SerializeField] private Button historyTopic_btn;
-    [SerializeField] private Button religionTopic_btn;
-    [SerializeField] private Button scienceTopic_btn;
-    [SerializeField] private Button sportsTopic_btn;
-    [SerializeField] private Button technologyTopic_btn;
+
 
     //=============================
     //============== Teams ===============
@@ -48,23 +44,14 @@ public class GameManager : MonoBehaviour
         }
         set
         {
-            if (currentSelectedTeam != value)
-            {
-                if (currentSelectedTeam != null)
-                    currentSelectedTeam.indicator.SetActive(false);        // turn off old team indicator
+            // reset indicators.
+            team1.indicator.SetActive(false);
+            team2.indicator.SetActive(false);
 
-                currentSelectedTeam = value;
+            currentSelectedTeam = value;
 
-                if (value == null)
-                {
-                    team1.indicator.SetActive(false);
-                    team2.indicator.SetActive(false);
-
-                    return;
-                }
-
-                value.indicator.SetActive(true);         // turn on new team indicator
-            }
+            if (value != null)
+                currentSelectedTeam.indicator.SetActive(true);         // activate new team indicator
         }
     }
 
@@ -90,6 +77,9 @@ public class GameManager : MonoBehaviour
 
     private List<QuestionSO> previousQuestions = new List<QuestionSO>();
 
+
+    private bool currentQuestionSwapped;
+
     //=============================
     //============== Singleton ===============
 
@@ -108,11 +98,7 @@ public class GameManager : MonoBehaviour
         FillQuestionContainers();
 
 
-        historyTopic_btn.onClick.AddListener(() => SelectTopic(QuestionSO.Topics.History));
-        religionTopic_btn.onClick.AddListener(() => SelectTopic(QuestionSO.Topics.Religion));
-        scienceTopic_btn.onClick.AddListener(() => SelectTopic(QuestionSO.Topics.Sceince));
-        sportsTopic_btn.onClick.AddListener(() => SelectTopic(QuestionSO.Topics.Sports));
-        technologyTopic_btn.onClick.AddListener(() => SelectTopic(QuestionSO.Topics.Technology));
+
     }
 
     private void FillQuestionContainers()
@@ -190,7 +176,12 @@ public class GameManager : MonoBehaviour
                 // show the answers, start 20 seconds timer, and swap teams if time is up.
                 SwapTeams();
                 questionUI.ShowAnswersPanel();
-                questionUI.StartTimer(answerStayTime, null);
+                //questionUI.StartTimer(answerStayTime, null);
+                questionUI.StartTimer(answerStayTime, () =>
+                {
+                    questionUI.Deactivate();
+                    activeQuestionContainer.SetIncorrect();
+                });
             });
 
 
@@ -210,8 +201,9 @@ public class GameManager : MonoBehaviour
 
     public void OnCorrectAnswer()
     {
-        CurrentSelectedTeam.IncreaseScore();
-
+        //CurrentSelectedTeam.IncreaseScore();
+        currentQuestionSwapped = false;
+        //CurrentSelectedTeam.IncreaseScore();
         questionUI.Deactivate();
         //ShowTopicSelection();
         activeQuestionContainer.SetWinnerTeam(CurrentSelectedTeam);
@@ -222,15 +214,39 @@ public class GameManager : MonoBehaviour
         CurrentSelectedTeam = null;
     }
     
+    //public void OnWrongAnswer()
+    //{
+    //    // because teams can be swapped only once.
+        
+    //    if (!team1.swappedAnswerOnce && !team2.swappedAnswerOnce)
+    //    {
+    //        CurrentSelectedTeam.swappedAnswerOnce = true;
+    //        SwapTeams();
+    //        questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
+
+    //        return;
+    //    }
+
+    //    questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
+    //    questionUI.Deactivate();
+    //    activeQuestionContainer.SetIncorrect();
+
+    //    team1.indicator.SetActive(false);
+    //    team2.indicator.SetActive(false);
+    //}
     public void OnWrongAnswer()
     {
-        // because teams can be swapped only once.
-        
-        if (!team1.swappedAnswerOnce && !team2.swappedAnswerOnce)
+        // teams can be swapped once per question.
+        if (!currentQuestionSwapped)
         {
-            CurrentSelectedTeam.swappedAnswerOnce = true;
+            currentQuestionSwapped = true;
             SwapTeams();
-            questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
+            //questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
+            questionUI.StartTimer(answerStayTime, () =>
+            {
+                questionUI.Deactivate();
+                activeQuestionContainer.SetIncorrect();
+            });
 
             return;
         }
@@ -238,6 +254,8 @@ public class GameManager : MonoBehaviour
         questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
         questionUI.Deactivate();
         activeQuestionContainer.SetIncorrect();
+
+        currentQuestionSwapped = false;
 
         team1.indicator.SetActive(false);
         team2.indicator.SetActive(false);

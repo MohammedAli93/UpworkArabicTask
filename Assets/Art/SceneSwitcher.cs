@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System;
 using TMPro;
-
+using RTLTMPro;
 public enum difficulty
 {
     hard,
@@ -37,18 +37,18 @@ enum BG
     third,
     fourth
 }
-
+[Serializable]
 public class SceneSwitcher : MonoBehaviour
 {
     public GameSettingsSO gameSettingsSO;
 
-    [SerializeField] TextMeshProUGUI greenTeamName;
-    [SerializeField] TextMeshProUGUI greenFirstName;
-    [SerializeField] TextMeshProUGUI greenSecondName;
+    [SerializeField] RTLTextMeshPro greenTeamName;
+    [SerializeField] RTLTextMeshPro greenFirstName;
+    [SerializeField] RTLTextMeshPro greenSecondName;
 
-    [SerializeField] TextMeshProUGUI redTeamName;
-    [SerializeField] TextMeshProUGUI redFirstName;
-    [SerializeField] TextMeshProUGUI redSecondName;
+    [SerializeField] RTLTextMeshPro redTeamName;
+    [SerializeField] RTLTextMeshPro redFirstName;
+    [SerializeField] RTLTextMeshPro redSecondName;
 
     [SerializeField] List<Image> roundNumToggle;
     [SerializeField] List<Image> difficultyToggle;
@@ -88,13 +88,13 @@ public class SceneSwitcher : MonoBehaviour
         #endregion
 
         #region Texts
-        gameSettingsSO.greenTeamName = greenTeamName.text;
-        gameSettingsSO.greenfirstName = greenFirstName.text;
-        gameSettingsSO.greensecondName = greenSecondName.text;
+        gameSettingsSO.greenTeamName = greenTeamName.OriginalText;
+        gameSettingsSO.greenfirstName = greenFirstName.OriginalText;
+        gameSettingsSO.greensecondName = greenSecondName.OriginalText;
 
-        gameSettingsSO.redTeamName = redTeamName.text;
-        gameSettingsSO.redfirstName = redFirstName.text;
-        gameSettingsSO.redsecondName = redSecondName.text;
+        gameSettingsSO.redTeamName = redTeamName.OriginalText;
+        gameSettingsSO.redfirstName = redFirstName.OriginalText;
+        gameSettingsSO.redsecondName = redSecondName.OriginalText;
         #endregion
 
         #region Toggles

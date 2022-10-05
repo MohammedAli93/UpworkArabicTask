@@ -16,7 +16,6 @@ public class Team : MonoBehaviour
 
     public GameObject indicator;
 
-    public bool swappedAnswerOnce;
 
     [SerializeField] private Button selection_BTN;
     [SerializeField] private Text score_TXT;

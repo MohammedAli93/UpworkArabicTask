@@ -17,8 +17,8 @@ public class QuestionUI : MonoBehaviour
     [SerializeField] private Text timer_TXT; //زمن ظهور الإجابة
     [SerializeField] private List<Button> answersButtons;
 
-    float answerShowTime;
-    float answerStayTime;
+    int answerShowTime;
+    int answerStayTime;
 
     //20 >> زمن بقاء السؤال
 
@@ -32,12 +32,17 @@ public class QuestionUI : MonoBehaviour
     private void Awake()
     {
         enableAnswers_BTN.onClick.AddListener(ShowAnswersPanel);
+        timer_TXT.text = gameSettingsSO.answerShowTime.ToString();
+        Debug.Log(timer_TXT.text);
+        answerShowTime = gameSettingsSO.answerShowTime;
+
+        answerStayTime = gameSettingsSO.answerStayTime;
+        Debug.Log(answerShowTime);
+        Debug.Log(answerStayTime);
     }
     private void Start()
     {
-        timer_TXT.text = gameSettingsSO.answerShowTime.ToString(); 
-        answerShowTime = gameSettingsSO.answerShowTime;
-        answerStayTime = gameSettingsSO.answerStayTime;
+     
     }
     public void SetQuestion(QuestionSO question)
     {
@@ -152,6 +157,8 @@ public class QuestionUI : MonoBehaviour
 
     public void StopTimer()
     {
+        timer_TXT.text = "";
+
         StopCoroutine(timerCoroutine);
     }
 

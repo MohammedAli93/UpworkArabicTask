@@ -7,19 +7,22 @@ public class MusicControl : MonoBehaviour
     //public static MusicControl instance;
     [SerializeField]
     Slider volumSlider;
+    private MusicControl instance;
+
     // Start is called before the first frame update
 
-    
+
     private void Awake()
     {
-        //DontDestroyOnLoad(this.gameObject);
-        //if(instance == null)
-        //{
-        //    instance = this;
-        //}else
-        //{
-        //    Destroy(gameObject);
-        //}
+        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
     void Start()
     {
