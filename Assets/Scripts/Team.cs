@@ -57,7 +57,7 @@ public class Team : MonoBehaviour
             {
                 winText.text = teamName + " wins";
                 winUi.gameObject.SetActive(true);
-                Debug.Log($"{teamName} team wins");
+                Debug.Log("REd team wins");
             }
         }
 

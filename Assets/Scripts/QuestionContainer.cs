@@ -17,7 +17,7 @@ public class QuestionContainer : MonoBehaviour
 
     private void Start()
     {
-        winnerTeamIndicator.color = Color.gray;
+        //winnerTeamIndicator.color = Color.gray;
 
         button.onClick.AddListener(() =>
         {
@@ -44,7 +44,7 @@ public class QuestionContainer : MonoBehaviour
     public void SetIncorrect()
     {
         button.interactable = false;
-        winnerTeamIndicator.color = Color.black;
+        //winnerTeamIndicator.color = Color.black;
     }
 
     public void SetWinnerTeam(Team winnerTeam)
