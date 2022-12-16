@@ -18,7 +18,10 @@ EditorBuildSettings:
     path: Assets/Modern UI Pack/Scenes/Settings.unity
     guid: d1d76a9edd9cd3d4a8a1d7dc88a89ffa
   - enabled: 1
-    path: Assets/_Scenes/AhmedEmadScene.unity
+    path: Assets/_Scenes/AhmedEmadSCene 2.unity
+    guid: 38bb34e49cd70df45a613c39473dd3bf
+  - enabled: 1
+    path: Assets/_Scenes/AhmedEmadSCene.unity
     guid: 127a406c707689748b86dcef14400d24
   - enabled: 0
     path: 

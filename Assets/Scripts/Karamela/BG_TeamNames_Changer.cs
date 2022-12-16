@@ -27,6 +27,7 @@ public class BG_TeamNames_Changer : MonoBehaviour
         redTeamName.text = gameSettingsSO.redTeamName;
         redfirstName.text = gameSettingsSO.redfirstName;
         redsecondName.text = gameSettingsSO.redsecondName;
+        
     }
 
 }

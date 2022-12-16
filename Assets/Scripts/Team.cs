@@ -8,6 +8,8 @@ public class Team : MonoBehaviour
     [SerializeField] Text winText;
     public Color teamColor;
 
+     [SerializeField] Image Texts1;
+    [SerializeField] Image  Texts2;
     public RowOrColumn teamWinsOnMatching;
 
     public List<WinQuestionsIndexes> winQuestionsIndexes;
@@ -57,6 +59,8 @@ public class Team : MonoBehaviour
             {
                 winText.text = teamName + " wins";
                 winUi.gameObject.SetActive(true);
+                Texts1.gameObject.SetActive(false);
+                Texts2.gameObject.SetActive(false);
                 Debug.Log("REd team wins");
             }
         }
