@@ -15,11 +15,13 @@ public class AnswersClicked : MonoBehaviour
     [SerializeField]
     private Button Answer3;
 
+    Team teamname;
     [SerializeField]
     private Button Answer4;
     private void Awake()
     {
 
+        teamname = GetComponent<Team>();
         Answer1 = Answer1.GetComponent<Button>();
         Answer2 = Answer2.GetComponent<Button>();
         Answer3 = Answer3.GetComponent<Button>();
@@ -30,12 +32,17 @@ public class AnswersClicked : MonoBehaviour
     {
 
      
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) && teamname.teamName == "Green")
             {
+         
                 Answer1.onClick.Invoke();
             }
+           if (Input.GetKeyDown(KeyCode.Q) && teamname.teamName == "Red")
+            {
 
-            if (Input.GetKeyDown(KeyCode.B))
+             Answer1.onClick.Invoke();
+            }
+        if (Input.GetKeyDown(KeyCode.B))
             {
                 Answer2.onClick.Invoke();
             }

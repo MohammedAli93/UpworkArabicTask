@@ -11,4 +11,9 @@ public class QuestionSO : ScriptableObject
     public List<string> WrongAnswers;
 
     public enum Topics { History, Religion, Sceince, Sports, Technology }
+
+    //Topic // QuestionString  // CorrectAnswer // wrong answer 1 // wrong 2 // wrong 3 
+
+    //
+
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -42,7 +42,7 @@ public class SceneSwitcher : MonoBehaviour
 {
     public GameSettingsSO gameSettingsSO;
 
-    [SerializeField] RTLTextMeshPro greenTeamName;
+    [SerializeField] public RTLTextMeshPro greenTeamName;
     [SerializeField] RTLTextMeshPro greenFirstName;
     [SerializeField] RTLTextMeshPro greenSecondName;
 
@@ -57,13 +57,13 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] List<Image> BGToggle;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+       
     }
 
     // Update is called once per frame
-   public void playGame()
+    public void playGame()
     {
         setSettingsSO();
     }
@@ -80,15 +80,17 @@ public class SceneSwitcher : MonoBehaviour
         gameSettingsSO.redsecondName = "";
 
 
-        gameSettingsSO.roundsNum = 0;
+        gameSettingsSO.RoundNum = 0;
         gameSettingsSO.answerShowTime = 0;
         gameSettingsSO.answerStayTime = 0;
         gameSettingsSO.bgNum = 0;
-        gameSettingsSO.difficulty = 0; 
+        gameSettingsSO.difficulty = 0;
         #endregion
 
         #region Texts
+        
         gameSettingsSO.greenTeamName = greenTeamName.OriginalText;
+        Debug.Log(greenTeamName.OriginalText);
         gameSettingsSO.greenfirstName = greenFirstName.OriginalText;
         gameSettingsSO.greensecondName = greenSecondName.OriginalText;
 

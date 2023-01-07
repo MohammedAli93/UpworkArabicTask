@@ -138,5 +138,10 @@ namespace RTLTMPro
 
             return input;
         }
+
+        public static implicit operator RTLTextMeshPro(string v)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

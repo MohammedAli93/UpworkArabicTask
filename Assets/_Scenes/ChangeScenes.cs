@@ -10,4 +10,9 @@ public class ChangeScenes : MonoBehaviour
        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
+    public void AppExit()
+    {
+        Application.Quit();
+    }
 }

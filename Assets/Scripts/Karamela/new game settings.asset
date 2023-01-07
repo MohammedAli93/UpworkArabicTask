@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35c872f91b14b24498adf268e8238eb6, type: 3}
   m_Name: new game settings
   m_EditorClassIdentifier: 
-  greenTeamName: 
-  redTeamName: 
-  greenfirstName: 
-  greensecondName: 
-  redfirstName: 
-  redsecondName: 
-  roundsNum: 0
+  greenTeamName: "\u200B"
+  redTeamName: "\u200B"
+  greenfirstName: "\u200B"
+  greensecondName: "\u200B"
+  redfirstName: "\u200B"
+  redsecondName: "\u200B"
+  roundsNum: 1
   difficulty: 0
-  answerShowTime: 0
-  answerStayTime: 0
-  bgNum: 0
+  answerShowTime: 30
+  answerStayTime: 35
+  bgNum: 1
+  levels: 0

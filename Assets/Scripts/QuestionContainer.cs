@@ -43,7 +43,8 @@ public class QuestionContainer : MonoBehaviour
 
     public void SetIncorrect()
     {
-        button.interactable = false;
+        button.interactable = true;
+
         //winnerTeamIndicator.color = Color.black;
     }
 
@@ -51,6 +52,7 @@ public class QuestionContainer : MonoBehaviour
     {
         button.interactable = false;
         this.winnerTeam = winnerTeam;
-        winnerTeamIndicator.color = winnerTeam.teamColor;
+        winnerTeamIndicator.sprite = winnerTeam.GetComponentInParent<Image>().sprite;
+        topic_Text.gameObject.SetActive(false);
     }
 }

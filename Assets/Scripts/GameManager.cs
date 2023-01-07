@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] GameSettingsSO gameSettingsSO;
     int answerStayTime;
+
+    public int roundsNum;
+    [SerializeField] GameObject threestarsRed;
+    [SerializeField] GameObject threestarsGreen;
+
+    [SerializeField] GameObject onestarsRed;
+
+    [SerializeField] GameObject onestarsGreen;
+
     //=============================
     //============= Question Containers ================
 
@@ -76,6 +86,7 @@ public class GameManager : MonoBehaviour
     private QuestionSO currentSelectedQuestion;
 
     private List<QuestionSO> previousQuestions = new List<QuestionSO>();
+    static bool flag ;
 
 
     private bool currentQuestionSwapped;
@@ -91,7 +102,25 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         answerStayTime = gameSettingsSO.answerStayTime;
+        if(gameSettingsSO.RoundNum == 3)
+        {
+            flag = true;
+            
+        }
 
+        //Debug.Log(roundsNum);
+        if (!flag)
+        {
+            onestarsGreen.SetActive(true);
+            onestarsRed.SetActive(true);
+
+        }
+        if (gameSettingsSO.RoundNum == 3  || gameSettingsSO.RoundNum == 2 || gameSettingsSO.RoundNum == 1 && flag)
+        {
+            threestarsGreen.SetActive(true);
+            threestarsRed.SetActive(true);
+        }
+     
         allQuestions = Resources.LoadAll<QuestionSO>("Questions/").ToList();
 
 
@@ -99,6 +128,11 @@ public class GameManager : MonoBehaviour
 
 
 
+    }
+
+    private void DontDestroyOnLoad(bool flag)
+    {
+        throw new System.NotImplementedException();
     }
 
     private void FillQuestionContainers()
@@ -212,12 +246,14 @@ public class GameManager : MonoBehaviour
         team2.CheckWin();
 
         CurrentSelectedTeam = null;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
     }
-    
+
     //public void OnWrongAnswer()
     //{
     //    // because teams can be swapped only once.
-        
+
     //    if (!team1.swappedAnswerOnce && !team2.swappedAnswerOnce)
     //    {
     //        CurrentSelectedTeam.swappedAnswerOnce = true;
@@ -244,8 +280,11 @@ public class GameManager : MonoBehaviour
             //questionUI.StartTimer(answerStayTime, questionUI.Deactivate);
             questionUI.StartTimer(answerStayTime, () =>
             {
-                questionUI.Deactivate();
+                //// here we should change the question
+                //questionUI.Deactivate();
                 activeQuestionContainer.SetIncorrect();
+
+
             });
 
             return;

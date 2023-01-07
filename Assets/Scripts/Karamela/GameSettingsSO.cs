@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="new game settings",menuName ="game settings")]
 public class GameSettingsSO : ScriptableObject
 {
-   [SerializeField] public string greenTeamName;
+   [HideInInspector] public string greenTeamName;
    [HideInInspector] public string redTeamName;
 
    [HideInInspector] public string greenfirstName;
@@ -14,9 +14,21 @@ public class GameSettingsSO : ScriptableObject
    [HideInInspector] public string redfirstName;
    [HideInInspector] public string redsecondName;
 
-   [HideInInspector] public int roundsNum;
+   [SerializeField] public int roundsNum;
+
+
+    public int RoundNum
+    {
+        get { return roundsNum; }
+        set { roundsNum = value; }
+    }
    [HideInInspector] public difficulty difficulty;
    [HideInInspector] public int answerShowTime;
    [HideInInspector] public int answerStayTime;
    [HideInInspector] public int bgNum;
+
+   [HideInInspector] public int levels;
+
+
 }
+
